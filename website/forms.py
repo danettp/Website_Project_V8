@@ -50,9 +50,30 @@ class UpdateAccountForm(FlaskForm):
                 # If a user with the entered email already exists, raise a validation error
                 raise ValidationError('That email is already taken. Please choose a different one.')
             
-# Post Title Field Form
+# Custom validator for word count
+def word_count_check(form, field):
+    min_words = 5  # Minimum number of words allowed
+    max_words = 100  # Maximum number of words allowed
+
+    # Count the number of words in the field's input
+    word_count = len(field.data.split())
+
+    if word_count < min_words:
+        raise ValidationError(f'Text must have at least {5} words.')
+
+    if word_count > max_words:
+        raise ValidationError(f'You have reached the maximum of {500} words.')
+
+# Post Form
 class PostForm(FlaskForm):
+    # Title of post
     title = StringField('Title', validators=[DataRequired()])
-    text = TextAreaField('Text', validators=[DataRequired()])
+    # Content of posts
+    text = TextAreaField('Text', validators=[DataRequired(), word_count_check])
+    # Submit Post Button
     submit = SubmitField('Update')
+
+    
+
+
     
