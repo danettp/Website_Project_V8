@@ -9,8 +9,8 @@ from .models import User
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=25)])
     email = StringField('Email', validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
+    password = PasswordField('Password', validators=[DataRequired(), Length(min=5)])
+    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), Length(min=5), EqualTo('password')])
     submit = SubmitField('Sign Up')
     
     # Validation to check if the username is already taken
