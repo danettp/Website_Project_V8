@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from flask_login import current_user
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, validators
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from .models import User
 
@@ -72,8 +72,3 @@ class PostForm(FlaskForm):
     text = TextAreaField('Text', validators=[DataRequired(), word_count_check])
     # Submit Post Button
     submit = SubmitField('Update')
-
-    
-
-
-    

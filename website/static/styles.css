@@ -8,6 +8,7 @@ html, body {
   font-family: 'Poppins', sans-serif;
   min-height: 100%; 
   position: relative;
+  background-color: #E1EBEE;
 }
 
 .article-img {
