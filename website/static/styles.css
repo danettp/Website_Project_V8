@@ -11,17 +11,6 @@ html, body {
   background-color: #E1EBEE;
 }
 
-.article-img {
-  height: 65px;
-  width: 65px;
-  margin: 16px; 
-}
-
-.post-title {
-  font-weight: bold;
-  line-height: 1.2;
-}
-
 #navbar_logo {
   height: 60px;
   max-height: 5vw;
@@ -45,6 +34,17 @@ html, body {
 
 .navbar-nav {
   margin-left: auto;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin: 16px; 
+}
+
+.post-title {
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 /* CUSTOMIZE THE CAROUSEL
