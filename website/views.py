@@ -33,6 +33,12 @@ def events():
     posts = Post.query.all()
     return render_template("events.html", user=current_user, posts=posts)
 
+@views.route("/about")
+def about():
+    # Query all posts from the database
+    posts = Post.query.all()
+    return render_template("about.html", user=current_user, posts=posts)
+
 # Route for creating a post
 @views.route("/create-post", methods=['GET', 'POST'])
 @login_required
