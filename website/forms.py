@@ -7,10 +7,10 @@ from .models import User
 
 # Registration form for user sign up
 class RegistrationForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired(), Length(min=2, max=25)])
+    username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
     email = StringField('Email', validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired(), Length(min=5)])
-    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), Length(min=5), EqualTo('password')])
+    password = PasswordField('Password', validators=[DataRequired(), Length(min=8)])
+    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), Length(min=8), EqualTo('password')])
     submit = SubmitField('Sign Up')
     
     # Validation to check if the username is already taken
@@ -27,7 +27,7 @@ class RegistrationForm(FlaskForm):
         
 # Update Account form
 class UpdateAccountForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired(), Length(min=2, max=25)])
+    username = StringField('Username', validators=[DataRequired(), Length(min=2, max=20)])
     email = StringField('Email', validators=[DataRequired(), Email()])
     picture = FileField('Update Profile Picture', validators=[FileAllowed('jpg', 'png')])
     submit = SubmitField('Update')
