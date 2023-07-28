@@ -182,8 +182,14 @@ html, body {
 
   .navbar-collapse.show #navbar-links {
     z-index: 1001;
-    background-color: #5072A7; /* Set the desired background color for the links */
+    background-color: #5072A7; 
   }
+}
+
+.btn-primary {
+  background-color: #5072A7; 
+  border-color: #5072A7; 
+  color: #fff; 
 }
 
 /*
