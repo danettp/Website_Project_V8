@@ -182,7 +182,7 @@ html, body {
 
   .navbar-collapse.show #navbar-links {
     z-index: 1001;
-    background-color: #5072A7; 
+    background-color: #5072A7;  
   }
 }
 
@@ -246,7 +246,7 @@ html, body {
 
 .bg-image {
   /* Set the background image URL */
-  background-color: #5072A7;
+  background-image: url("../static/assets/Untitled\ design.png");
   background-size: cover;
   background-position: center;
   min-height: 300px;
@@ -254,14 +254,16 @@ html, body {
 }
 
 .bg-secondary {
-  background-image: url("../static/assets/ian.jpg");
+  background-image: url("../static/assets/freeze.jpeg");
+  min-height: 600px;
   background-size: cover;
   background-position: center;
 }
 
 .bg-primary {
   /* Set the background image URL */
-  background-image: url("../static/assets/ian.jpg");
+  background-image: url("../static/assets/radiohead.jpg");
+  min-height: 600px;
 
   /* Set the background size to cover the entire element */
   background-size: cover;
